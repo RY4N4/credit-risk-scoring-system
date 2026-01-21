@@ -1,6 +1,6 @@
 # 🏦 Credit Risk Scoring System
 
-> **Production-Ready ML System with Interactive Web UI**  
+> **ML System with Interactive Web UI**  
 > Real-time loan default prediction with XGBoost, FastAPI, and Streamlit
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
