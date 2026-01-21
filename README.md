@@ -65,7 +65,7 @@ This system uses **machine learning** to predict the likelihood of loan default 
 
 ---
 
-## 🎨 Interactive Web UI (NEW!)
+## 🎨 Interactive Web UI
 
 Beautiful Streamlit-based frontend for real-time credit risk assessment:
 
@@ -463,52 +463,6 @@ credit-risk-scoring/
 ```
 
 ---
-
-## 📝 Resume Bullet Points
-
-Copy-paste these for your resume:
-
-### ML Engineer / Data Scientist Role:
-- ✅ **Built end-to-end credit risk scoring system** using XGBoost achieving 82% AUC, reducing loan default rates by 15-25% and saving $14.6M annually through automated underwriting
-- ✅ **Engineered 8 domain-specific features** (debt-to-income, loan-to-income ratios, employment stability) improving model performance by 20% over baseline logistic regression
-- ✅ **Deployed production FastAPI service** handling 1000+ predictions/hour with <100ms latency, implementing Pydantic validation, health checks, and structured logging
-- ✅ **Optimized decision threshold** using cost-sensitive analysis (false negative = 5x false positive cost), reducing expected losses by $90K per 100 defaults
-- ✅ **Handled severe class imbalance** (10-20% default rate) using SMOTE oversampling and scale_pos_weight, improving recall from 42% to 51%
-
-### Backend / API Developer Role:
-- ✅ **Developed RESTful credit risk API** using FastAPI with Pydantic schemas, serving real-time loan decisions with automatic input validation and error handling
-- ✅ **Implemented ML model serving pipeline** with joblib serialization, preprocessing artifact management, and graceful degradation for production resilience
-- ✅ **Created comprehensive API documentation** with interactive Swagger/ReDoc interfaces, example requests, and business logic explanations for stakeholder alignment
-
-### Data Engineering Role:
-- ✅ **Designed modular data preprocessing pipeline** handling 2.2M loan records with missing value imputation, categorical encoding, feature scaling, and train/test stratification
-- ✅ **Built reproducible feature engineering framework** transforming raw Lending Club data into ML-ready features with automated artifact versioning for inference consistency
-
----
-
-## 🤝 Contributing
-
-This is an interview/portfolio project. Feel free to:
-- Fork and adapt for your own use case
-- Suggest improvements via issues
-- Share feedback on architecture
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) file for details
-
----
-
-## 👨‍💻 Author
-
-**Your Name**  
-ML Engineer | Fintech Enthusiast  
-[LinkedIn](#) | [GitHub](#) | [Portfolio](#)
-
----
-
 ## 📚 References & Resources
 
 - [Lending Club Dataset](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
