@@ -56,3 +56,96 @@ A Streamlit-based frontend for real-time credit risk assessment.
 ### Run the UI
 ```bash
 streamlit run app.py
+
+🏗️ System Architecture
+Raw Data (Lending Club)
+        ↓
+Preprocessing Pipeline
+        ↓
+Feature Engineering
+        ↓
+Model Training (Logistic + XGBoost)
+        ↓
+Evaluation & Threshold Optimization
+        ↓
+FastAPI Inference Service
+        ↓
+Streamlit Web UI / REST API
+🧠 Machine Learning Details
+Models
+Logistic Regression (baseline)
+XGBoost (production model)
+Techniques Used
+Feature engineering (debt-to-income, loan-to-income, employment stability)
+Class imbalance handling using:
+SMOTE oversampling
+scale_pos_weight
+Cost-sensitive threshold optimization
+📊 Model Performance
+Metric	Logistic Regression	XGBoost
+ROC-AUC	0.76	0.82
+Precision (Default)	0.68	0.74
+Recall (Default)	0.42	0.51
+F1-score	0.52	0.60
+Threshold Optimization
+The decision threshold was optimized based on business cost, where false negatives (approving bad loans) are significantly more expensive than false positives.
+🌐 API (FastAPI)
+Endpoints
+POST /predict-risk – Predict loan default risk
+GET /health – Service health check
+Example Request
+{
+  "loan_amnt": 15000,
+  "term": "36 months",
+  "int_rate": 12.5,
+  "annual_inc": 75000,
+  "dti": 18.5,
+  "grade": "B",
+  "emp_length": "5 years"
+}
+Example Response
+{
+  "risk_score": 0.23,
+  "decision": "APPROVE",
+  "risk_category": "MEDIUM"
+}
+🔐 Production Readiness
+FastAPI with Pydantic validation
+Consistent preprocessing for training and inference
+Model artifact serialization
+Structured logging and health checks
+Sub-100ms inference latency
+📁 Project Structure
+credit-risk-scoring/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+├── src/
+│   ├── data_processing.py
+│   ├── feature_engineering.py
+│   ├── train.py
+│   └── evaluate.py
+├── api/
+│   ├── main.py
+│   └── schema.py
+├── models/
+│   ├── credit_model.pkl
+│   ├── scaler.pkl
+│   └── encoders.pkl
+├── reports/
+│   └── evaluation plots
+└── README.md
+📚 Dataset
+Source: Lending Club (Kaggle)
+Size: ~2.2M loan records
+Target: Loan default (binary)
+Class Imbalance: ~10–20% defaults
+🎓 Learning Outcomes
+This project demonstrates:
+End-to-end ML system development
+Handling imbalanced classification problems
+Feature engineering for credit risk
+Cost-sensitive decision making
+Production ML deployment using FastAPI
+API-based model serving with validation
